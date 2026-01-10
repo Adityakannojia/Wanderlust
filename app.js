@@ -24,7 +24,7 @@ const listingsRouter = require("./routes/listings.js")
 const reviewsRouter = require("./routes/review.js")
 const userRouter = require("./routes/user.js")
 
-const dbUrl = process.env.ATLASEDB_URL
+const dbUrl = process.env.ATLASEDB_URL   // Atlase database
 
 async function main(){
     await mongoose.connect(dbUrl);
