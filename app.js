@@ -98,17 +98,9 @@ app.use((req, res, next) =>{
 })
 
 
-// demo
-
-// app.get("/demo", async(req,res)=>{
-//     let fakeUser = new User({
-//         email: "student@gmail.com",
-//         username: "delta-student"
-//     })
-
-//     let registerUser = await User.register(fakeUser, "helloworld")   //static
-//     res.send(registerUser)
-// })
+app.get("/", (req, res) => {
+    res.redirect("/listings")
+})
 
 
 // express.Route
@@ -117,8 +109,8 @@ app.use("/listings/:id/reviews", reviewsRouter)
 app.use("/", userRouter)
 
 
-// Error Handler
 
+// Error Handler
 
 app.use((err, req, res, next) => {
     let {status = 500, message = "something went error"} = err
