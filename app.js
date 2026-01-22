@@ -119,9 +119,6 @@ app.use("/", userRouter)
 
 // Error Handler
 
-app.all("", (req, res) =>{
-    throw new ExpressError(400, "page not found")
-})
 
 app.use((err, req, res, next) => {
     let {status = 500, message = "something went error"} = err
