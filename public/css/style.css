@@ -10,7 +10,7 @@ body {
 }
 
 .navbar{
-    height: 6rem;
+    /* height: 6rem; */
     background-color: white;
     margin-bottom: 2rem;
 }
