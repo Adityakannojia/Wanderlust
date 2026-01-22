@@ -119,10 +119,6 @@ app.use("/", userRouter)
 
 // Error Handler
 
-app.all("", (req, res, next) => {
-    next(new ExpressError(404, "Page not found"))   // async error handler
-})
-
 app.use((err, req, res, next) => {
     let {status = 500, message = "something went error"} = err
     console.log(err)
